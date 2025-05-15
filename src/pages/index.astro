@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-// Component Imports
 import Button from "../components/Button.astro";
 ---
 
@@ -12,58 +11,73 @@ import Button from "../components/Button.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro + TailwindCSS</title>
   </head>
-  <style>
-    img {
-      --s: 10px; /* control the size */
-      padding: var(--s);
-      border: calc(2 * var(--s)) solid #0000;
-      outline: 1px solid #000;
-      outline-offset: calc(-1 * var(--s));
-      background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
-    }
-  </style>
-  <body class="bg-[#D4C0B4]">
+  <body
+    class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/src/assets/images/background-art.jpg')] bg-cover bg-center"
+  >
     <div class="grid grid-cols-12 gap-4 p-6 min-h-screen">
       <!-- Card principal -->
-      <div class="col-span-12 md:col-span-8 bg-white p-6 rounded-2xl shadow-lg">
-        <div class="h-full flex">
-          <div>
-            <h2 class="font-kame-poster-black text-5xl">Dr Matheus Fontes Escobar, PsyD</h2>
-            <p class="text-gray-600 mt-2">
-              Nulla excepteur eiusmod consequat cillum tempor eiusmod veniam
-              amet nisi est est et ullamco qui. Laboris consequat esse eiusmod
-              cupidatat mollit id irure velit sunt. Sit nisi labore nisi non est
-              nulla pariatur commodo non commodo ea aliqua ullamco.
+      <div
+        class="col-span-12 md:col-span-8 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+      >
+        <div class="flex flex-col md:flex-row gap-6 items-center h-full">
+          <!-- Texto -->
+          <div class="flex-grow">
+            <h2 class="font-kame-poster-black text-5xl text-gray-100">
+              Dr Matheus Fontes Escobar, PsyD
+            </h2>
+            <p class="text-gray-300 mt-2">
+              Me chamo Matheus Escobar, sou Psicólogo pela UFRGS. Atendo online
+              e presencialmente em Campinas, no estado de São Paulo. A terapia é
+              um caminho, que seguiremos em conjunto, na busca de encontrar a
+              origem das causas de sua angústia. Poderá se conhecer melhor,
+              organizar-se e buscar as melhores soluções para o que te
+              embarreira.
             </p>
           </div>
-          <img
-            src="/src/assets/images/profile-pic.jpg"
-            alt="Foto de Cachorro"
-            class="w-48 h-64 object-cover rounded-md sepia-[0.5] contrast-[1.2] brightness-[0.9]"
-          />
+
+          <!-- Imagem -->
+          <div class="flex-shrink-0 max-h-[50vh] max-w-full w-full md:w-auto">
+            <div class="p-1 rounded-xl border border-[rgba(140,120,110,0.4)] bg-[rgba(140,120,110,0.1)]">
+              <img
+                src="/src/assets/images/profile-pic.jpg"
+                alt="Foto de Matheus Escobar"
+                class="h-auto max-h-[40vh] w-full md:w-auto max-w-full rounded-lg object-contain"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Texto secundário -->
-      <div class="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl shadow-lg">
-        <h3 class="text-xl font-semibold">Contato</h3>
-        <p class="text-gray-600 mt-2">Ferrumetum nulla...</p>
-        <Button class="mt-4">Learn More</Button>
-      </div>
-      <div class="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl shadow-lg">
-        <h2 class="text-3xl font-bold">O melhor psicólogo que você pode ter</h2>
-        <p class="text-gray-600 mt-2">
-          BUM frase de efeito
-        </p>
+      <div
+        class="col-span-12 md:col-span-4 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+      >
+        <h3 class="text-xl font-semibold text-gray-100">Contato</h3>
+        <p class="text-gray-300 mt-2">Ferrumetum nulla...</p>
         <Button class="mt-4">Learn More</Button>
       </div>
 
+      <div
+        class="col-span-12 md:col-span-4 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+      >
+        <h2 class="text-3xl font-bold text-gray-100">
+          O melhor psicólogo que você pode ter
+        </h2>
+        <p class="text-gray-300 mt-2">
+          Atendo sob a perspectiva da Psicanálise, por acreditar na
+          singularidade de cada pessoa que chega a mim, entendendo que cada
+          história é única e merece atenção particular.
+        </p>
+      </div>
+
       <!-- Texto secundário -->
-      <div class="col-span-12 md:col-span-8 bg-white p-6 rounded-2xl shadow-lg">
-        <h3 class="text-xl font-semibold">
+      <div
+        class="col-span-12 md:col-span-8 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+      >
+        <h3 class="text-xl font-semibold text-gray-100">
           Escrever alguns cursos/experiência aqui em tópicos?
         </h3>
-        <p class="text-gray-600 mt-2">Ferrumetum nulla...</p>
+        <p class="text-gray-300 mt-2">Ferrumetum nulla...</p>
         <Button class="mt-4">Learn More</Button>
       </div>
     </div>
