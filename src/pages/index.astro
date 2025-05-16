@@ -12,27 +12,27 @@ import { Icon } from "astro-icon/components";
     <meta name="generator" content={Astro.generator} />
     <title>Astro + TailwindCSS</title>
   </head>
-  <body
-    class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/src/assets/images/background-art.jpg')] bg-cover bg-center"
-  >
+  <body class="bg-[#D3D3D3] bg-cover bg-center">
     <div class="grid grid-cols-12 gap-4 p-6 min-h-screen">
       <!-- Card principal -->
       <div
-        class="col-span-12 md:col-span-8 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+        class="col-span-12 md:col-span-8 bg-[#A9BEB5] p-6 rounded-2xl shadow-lg"
       >
-        <div class="flex flex-col md:flex-row gap-6 items-center h-full">
+        <div class="flex flex-col md:flex-row gap-6 items-start h-full">
           <!-- Texto -->
           <div class="flex-grow">
-            <h2 class="font-kame-poster-black text-5xl text-gray-100">
+            <h2 class="font-kame-poster-black text-5xl text-[#0F0E0C]">
               Dr Matheus Fontes Escobar, PsyD
             </h2>
-            <p class="text-gray-300 mt-2">
+            <p class="text-[#0F0E0C] mt-2">
               Me chamo Matheus Escobar, sou Psicólogo pela UFRGS. Atendo online
               e presencialmente em Campinas, no estado de São Paulo. A terapia é
               um caminho, que seguiremos em conjunto, na busca de encontrar a
               origem das causas de sua angústia. Poderá se conhecer melhor,
               organizar-se e buscar as melhores soluções para o que te
-              embarreira.
+              embarreira. Atendo sob a perspectiva da Psicanálise, por acreditar
+              na singularidade de cada pessoa que chega a mim, entendendo que
+              cada história é única e merece atenção particular.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ import { Icon } from "astro-icon/components";
 
       <!-- Texto secundário -->
       <div
-        class="col-span-12 md:col-span-4 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+        class="col-span-12 md:col-span-4 bg-[#6D958D] p-6 rounded-2xl shadow-lg"
       >
         <h3 class="text-xl font-semibold text-gray-100 mb-4">Contato</h3>
         <ul class="space-y-3">
@@ -64,7 +64,7 @@ import { Icon } from "astro-icon/components";
               target="_blank"
               class="flex items-center gap-3 bg-white/10 hover:bg-white/20 transition-colors duration-200 text-gray-100 px-4 py-2 rounded-xl shadow-sm"
             >
-              <Icon name="whatsapp" class="w-5 h-5 text-green-400" />
+              <Icon name="whatsapp" class="w-5 h-5 text-white" />
               WhatsApp
             </a>
           </li>
@@ -76,7 +76,7 @@ import { Icon } from "astro-icon/components";
               target="_blank"
               class="flex items-center gap-3 bg-white/10 hover:bg-white/20 transition-colors duration-200 text-gray-100 px-4 py-2 rounded-xl shadow-sm"
             >
-              <Icon name="linkedin" class="w-5 h-5 text-blue-400" />
+              <Icon name="linkedin" class="w-5 h-5 text-white" />
               LinkedIn
             </a>
           </li>
@@ -88,35 +88,41 @@ import { Icon } from "astro-icon/components";
               target="_blank"
               class="flex items-center gap-3 bg-white/10 hover:bg-white/20 transition-colors duration-200 text-gray-100 px-4 py-2 rounded-xl shadow-sm"
             >
-              <Icon name="facebook" class="w-5 h-5 text-blue-500" />
-              Facebook
+              <Icon name="facebook" class="w-5 h-5 text-white" />
+              <span>Facebook</span>
             </a>
           </li>
         </ul>
       </div>
 
       <div
-        class="col-span-12 md:col-span-4 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+        class="col-span-12 md:col-span-2 rounded-2xl shadow-lg overflow-hidden max-h-[35vh]"
       >
-        <h2 class="text-3xl font-bold text-gray-100">
-          O melhor psicólogo que você pode ter
-        </h2>
-        <p class="text-gray-300 mt-2">
-          Atendo sob a perspectiva da Psicanálise, por acreditar na
-          singularidade de cada pessoa que chega a mim, entendendo que cada
-          história é única e merece atenção particular.
-        </p>
+        <img
+          src="/src/assets/images/background-art.jpg"
+          alt="Arte de fundo"
+          class="w-full h-full object-cover rounded-xl"
+        />
+      </div>
+      <div
+        class="col-span-12 md:col-span-2 rounded-2xl shadow-lg overflow-hidden max-h-[35vh]"
+      >
+        <img
+          src="/src/assets/images/elephant.jpg"
+          alt="Arte de fundo"
+          class="w-full h-full object-cover rounded-xl"
+        />
       </div>
 
       <!-- Texto secundário -->
       <div
-        class="col-span-12 md:col-span-8 bg-[rgba(140,120,110,0.92)] p-6 rounded-2xl shadow-lg"
+        class="col-span-12 md:col-span-8 bg-[#9EA675] p-6 rounded-2xl shadow-lg max-h-[35vh]"
       >
-        <h3 class="text-xl font-semibold text-gray-100">
+        <h3 class="text-xl font-semibold text-[#0F0E0C]">
           Escrever alguns cursos/experiência aqui em tópicos?
         </h3>
-        <p class="text-gray-300 mt-2">Ferrumetum nulla...</p>
-        <Button class="mt-4">Learn More</Button>
+        <p class="text-[#0F0E0C] mt-2">Ferrumetum nulla...</p>
+        <!-- <Button class="mt-4">Learn More</Button> -->
       </div>
     </div>
   </body>
