@@ -3,6 +3,8 @@ import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 import { Image } from 'astro:assets'
 import profilePic from '../assets/images/profile-pic.jpg'
+import elephantPic from '../assets/images/elephant.jpg'
+import bgArtPic from '../assets/images/background-art.jpg'
 ---
 
 <html lang="en">
@@ -99,8 +101,8 @@ import profilePic from '../assets/images/profile-pic.jpg'
       <div
         class="col-span-12 md:col-span-2 rounded-2xl shadow-lg overflow-hidden max-h-[35vh]"
       >
-        <img
-          src="/src/assets/images/background-art.jpg"
+        <Image
+          src={bgArtPic}
           alt="Arte de fundo"
           class="w-full h-full object-cover rounded-xl"
         />
@@ -108,8 +110,8 @@ import profilePic from '../assets/images/profile-pic.jpg'
       <div
         class="col-span-12 md:col-span-2 rounded-2xl shadow-lg overflow-hidden max-h-[35vh]"
       >
-        <img
-          src="/src/assets/images/elephant.jpg"
+        <Image
+          src={elephantPic}
           alt="Arte de fundo"
           class="w-full h-full object-cover rounded-xl"
         />
