@@ -1,10 +1,10 @@
 ---
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
-import { Image } from 'astro:assets'
-import profilePic from '../assets/images/profile-pic.jpg'
-import elephantPic from '../assets/images/elephant.jpg'
-import bgArtPic from '../assets/images/background-art.jpg'
+import { Image } from "astro:assets";
+import profilePic from "../assets/images/profile-pic.jpg";
+import elephantPic from "../assets/images/elephant.jpg";
+import bgArtPic from "../assets/images/background-art.jpg";
 ---
 
 <html lang="en">
@@ -15,7 +15,7 @@ import bgArtPic from '../assets/images/background-art.jpg'
     <meta name="generator" content={Astro.generator} />
     <title>Astro + TailwindCSS</title>
   </head>
-  <body class="bg-[#D3D3D3] bg-cover bg-center">
+  <body class="bg-[url('../assets/images/background.jpg')] bg-cover bg-center">
     <div class="grid grid-cols-12 gap-4 p-6 min-h-screen">
       <!-- Card principal -->
       <div
@@ -23,10 +23,24 @@ import bgArtPic from '../assets/images/background-art.jpg'
       >
         <div class="flex flex-col md:flex-row gap-6 items-start h-full">
           <!-- Texto -->
-          <div class="flex-grow">
+          <div class="flex flex-col items-center md:block md:items-start">
             <h2 class="font-kame-poster-black text-5xl text-[#0F0E0C]">
-              Dr Matheus Fontes Escobar, PsyD
+              Matheus Fontes Escobar
             </h2>
+            <h3 class="font-kame-poster-black text-3xl text-[#0F0E0C]">
+              Psicologia / Psicanálise
+            </h3>
+
+            <div
+              class="inline-block md:hidden p-1 rounded-xl border border-[rgba(140,120,110,0.4)] bg-[rgba(140,120,110,0.1)]"
+            >
+              <Image
+                src={profilePic}
+                alt="Foto de Matheus Escobar"
+                class="h-auto w-64 rounded-lg object-contain"
+              />
+            </div>
+
             <p class="text-[#0F0E0C] mt-2">
               Me chamo Matheus Escobar, sou Psicólogo pela UFRGS. Atendo online
               e presencialmente em Campinas, no estado de São Paulo. A terapia é
@@ -40,14 +54,16 @@ import bgArtPic from '../assets/images/background-art.jpg'
           </div>
 
           <!-- Imagem -->
-          <div class="flex-shrink-0 max-h-[50vh] max-w-full w-full md:w-auto">
+          <div
+            class="hidden md:block flex-shrink-0 max-h-[50vh] max-w-full w-full md:w-auto"
+          >
             <div
               class="p-1 rounded-xl border border-[rgba(140,120,110,0.4)] bg-[rgba(140,120,110,0.1)]"
             >
-              <Image              
+              <Image
                 src={profilePic}
                 alt="Foto de Matheus Escobar"
-                class="h-auto max-h-[40vh] w-full md:w-auto max-w-full rounded-lg object-contain"
+                class="h-auto max-h-[40vh] md:w-auto max-w-full rounded-lg object-contain"
               />
             </div>
           </div>
